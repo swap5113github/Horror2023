@@ -1,6 +1,6 @@
 
 
-<MenuWidget>:
+<OptionsWidget>:
     canvas.before:
         Color:
             rgba : 0,0,0,.8
@@ -8,22 +8,42 @@
             size: self.size
 
     Label:
-        font_size : dp(60)
-        font_name: "fonts/Sackers-Gothic-Std-Light.ttf"
-        text : root.parent.menu_title
-        pos_hint : {"center_x": .5, "center_y" : .6}
+        font_size : dp(30)
+        font_name: "Horror/galaxy/fonts/DeathtoMetal.ttf"
+        text : root.parent.options_title
+        pos_hint : {"center_x":.5, "center_y" : .7}
     Button:
         font_size : dp(30)
         font_name: "fonts/Eurostile.ttf"
-        text : root.parent.menu_button_title
-        pos_hint : {"center_x": .5, "center_y" : .2}
-        size_hint : .2, .15
-        on_press : root.parent.on_menu_button_pressed()
+        text : root.parent.options_button_title_easy
+        pos_hint : {"center_x": .2, "center_y" : .25}
+        size_hint : .2, .1
+        on_press : root.parent.on_options_button_easy_pressed()
+        background_normal :""
+        background_color : 1,.3,.4,.85
+    Button:
+        font_size : dp(30)
+        font_name: "fonts/Eurostile.ttf"
+        text : root.parent.options_button_title_medium
+        pos_hint : {"center_x": .5, "center_y" : .25}
+        size_hint : .2, .1
+        on_press : root.parent.on_options_button_medium_pressed()
+        background_normal :""
+        background_color : 1,.3,.4,.85
+    Button:
+        font_size : dp(30)
+        font_name: "fonts/Eurostile.ttf"
+        text : root.parent.options_button_title_hard
+        pos_hint : {"center_x": .8, "center_y" : .25}
+        size_hint : .2, .1
+        on_press : root.parent.on_options_button_hard_pressed()
         background_normal :""
         background_color : 1,.3,.4,.85
     Label:
         text : root.parent.best_score_txt
         font_size : dp(20)
         font_name: "fonts/Eurostile.ttf"
-        size_hint : .2,.2
+        size_hint : .25,.2
         pos_hint : {"x":0.8,"top":1}
+    
+
