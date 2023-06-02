@@ -1,4 +1,4 @@
-#: import menu menu
+#: import options options
 
 MainWidget:
 
@@ -8,16 +8,17 @@ MainWidget:
         Rectangle:
             size : self.size
             source : "galaxy/images/Screenshot 2023-06-01 230744.png"
-    menu_widget: menu_widget
+    options_widget: options_widget
     perspective_point_x: self.width/2
     perspective_point_y: self.height*0.75
     
-    MenuWidget:
-        id: menu_widget
+    OptionsWidget:
+        id: options_widget
     Label:
         text : root.score_txt
         font_size : dp(20)
-        font_name: "fonts/Eurostile.ttf"
+        font_name: "Horror/galaxy/fonts/LAMEBRAINS.ttf"
         size_hint : .2,.2
         pos_hint : {"x":0,"top":1}
     
+
