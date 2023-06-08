@@ -12,9 +12,9 @@ def keyboard_is_closed(self):
 
 def on_press_keyboard_down(self, keyboard, keycode, text, modifiers):
     if keycode[1] == 'left':
-        self.present_speed_x = self.speed_X
+        self.present_speed_x = self.speed_along_X
     elif keycode[1] == 'right':
-        self.present_speed_x = -self.speed_X
+        self.present_speed_x = -self.speed_along_X
     return True
 
 def on_press_keyboard_up(self, keyboard, keycode):
@@ -24,10 +24,10 @@ def on_press_keyboard_up(self, keyboard, keycode):
 def on_touching_down(self, touch):
     if touch.x < self.width/2:
         # print("<-")
-        self.present_speed_x = self.speed_X
+        self.present_speed_x = self.speed_along_X
     else:
         # print("->")
-        self.present_speed_x = -self.speed_X
+        self.present_speed_x = -self.speed_along_X
     return super(RelativeLayout,self).on_touching_down(touch)
     
 
