@@ -7,15 +7,15 @@ MainWidget:
     canvas.before :
         Rectangle:
             size : self.size
-            source : "galaxy/images/Screenshot 2023-06-01 230744.png"
+            source : "Screenshot 2023-06-01 230744.png"
     options_widget: options_widget
-    perspective_point_x: self.width/2
-    perspective_point_y: self.height*0.75
+    point_x_in_perspective_view: self.width/2
+    point_y_in_perspective_view: self.height*0.75
     
     OptionsWidget:
         id: options_widget
     Label:
-        text : root.score_txt
+        text : root.score_counter
         font_size : dp(20)
         font_name: "DragonHunter-9Ynxj.otf"
         size_hint : .2,.2
